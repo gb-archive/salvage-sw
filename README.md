@@ -1,4 +1,4 @@
-# savage-sw
+# salvage-sw
 
 This repository is an historical mirror of very old software (from 1997 onwards) related to Game Boy development.
 
