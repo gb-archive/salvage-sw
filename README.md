@@ -2,7 +2,7 @@
 
 This repository is an historical mirror of very old software (from 1997 onwards) related to Game Boy development.
 
-There's a similar repository where we are mirroring and savaging websites, txts and misc docs: [savage](https://github.com/gb-archive/savage).
+There's a similar repository where we are mirroring and savaging websites, txts and misc docs: [salvage](https://github.com/gb-archive/salvage).
 
 Most release zip files are also extracted, facilitating search engines indexing those sources.
 
