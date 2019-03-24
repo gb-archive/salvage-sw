@@ -1,0 +1,14 @@
+XL
+H 7 areas 1 global symbols
+M _startup
+O -mz80
+A _CODE size 3 flags 0
+S __sdcc_external_startup Def0000
+A _DATA size 0 flags 0
+A _OVERLAY size 0 flags 0
+A _HOME size 0 flags 0
+A _GSINIT size 0 flags 0
+A _GSFINAL size 0 flags 0
+A _CABS size 0 flags 0
+T 00 00 2E 00 C9
+R 00 00 00 00

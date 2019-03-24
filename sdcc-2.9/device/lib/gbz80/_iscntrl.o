@@ -1,0 +1,16 @@
+XL
+H 7 areas 1 global symbols
+M _iscntrl
+O -mgbz80
+A _CODE size 1B flags 0
+S _iscntrl Def0000
+A _DATA size 0 flags 0
+A _OVERLAY size 0 flags 0
+A _HOME size 0 flags 0
+A _GSINIT size 0 flags 0
+A _GSFINAL size 0 flags 0
+A _CABS size 0 flags 0
+T 00 00 3E 1F F8 02 96 D2 13 00 7E D6 7F C2 10 00
+R 00 00 00 00 00 08 00 00 00 0E 00 00
+T 0E 00 18 03 C3 18 00 1E 01 C3 1A 00 1E 00 C9
+R 00 00 00 00 00 05 00 00 00 0A 00 00

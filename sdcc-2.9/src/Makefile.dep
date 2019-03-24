@@ -1,0 +1,179 @@
+SDCCy.o: SDCCy.c SDCCglobl.h SDCCset.h ../sdccconf.h SDCCerr.h SDCCsymt.h \
+  SDCChasht.h ./../support/Util/dbuf.h SDCCval.h SDCCmem.h SDCCast.h \
+  port.h SDCCicode.h SDCCbitv.h SDCCargs.h SDCCpeeph.h \
+  ./../support/Util/newalloc.h SDCCutil.h
+SDCChasht.o: SDCChasht.c SDCCglobl.h SDCCset.h ../sdccconf.h SDCCerr.h \
+  SDCChasht.h ./../support/Util/newalloc.h
+SDCCmain.o: SDCCmain.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h \
+  ./../support/Util/dbuf_string.h ./../support/Util/dbuf.h \
+  ./../support/Util/BuildCmd.h ./../support/Util/MySystem.h ./SDCCset.h \
+  SDCCmacro.h
+SDCCsymt.o: SDCCsymt.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h \
+  ./../support/Util/dbuf_string.h ./../support/Util/dbuf.h
+SDCCopt.o: SDCCopt.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h
+SDCCast.o: SDCCast.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h
+SDCCmem.o: SDCCmem.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h \
+  ./../support/Util/dbuf_string.h ./../support/Util/dbuf.h
+SDCCval.o: SDCCval.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h
+SDCCicode.o: SDCCicode.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h \
+  ./../support/Util/dbuf_string.h ./../support/Util/dbuf.h
+SDCCbitv.o: SDCCbitv.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h
+SDCCset.o: SDCCset.c ./../support/Util/newalloc.h SDCCset.h
+SDCClabel.o: SDCClabel.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h
+SDCCBBlock.o: SDCCBBlock.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h
+SDCCloop.o: SDCCloop.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h
+SDCCcse.o: SDCCcse.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h \
+  ./../support/Util/dbuf_string.h ./../support/Util/dbuf.h
+SDCCcflow.o: SDCCcflow.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h
+SDCCdflow.o: SDCCdflow.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h
+SDCClrange.o: SDCClrange.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h
+SDCCptropt.o: SDCCptropt.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h
+SDCCpeeph.o: SDCCpeeph.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h \
+  ./../support/Util/dbuf_string.h ./../support/Util/dbuf.h
+SDCCglue.o: SDCCglue.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h \
+  ./../support/Util/dbuf_string.h ./../support/Util/dbuf.h
+SDCCasm.o: SDCCasm.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h \
+  ./../support/Util/dbuf_string.h ./../support/Util/dbuf.h
+SDCCmacro.o: SDCCmacro.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h
+SDCCutil.o: SDCCutil.c ./../support/Util/dbuf.h SDCCglobl.h SDCCset.h \
+  ../sdccconf.h SDCCerr.h SDCCmacro.h SDCChasht.h SDCCutil.h \
+  ./../support/Util/newalloc.h ./../support/Util/dbuf_string.h \
+  ./../support/Util/dbuf.h version.h
+SDCCdebug.o: SDCCdebug.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h
+cdbFile.o: cdbFile.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h
+SDCCdwarf2.o: SDCCdwarf2.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h SDCCdwarf2.h
+SDCCerr.o: SDCCerr.c SDCCerr.h
+SDCClex.o: SDCClex.c common.h SDCCglobl.h SDCCset.h ../sdccconf.h \
+  SDCCerr.h SDCCmem.h ./../support/Util/dbuf.h SDCCast.h SDCCsymt.h \
+  SDCChasht.h SDCCval.h SDCCy.h SDCCbitv.h SDCCicode.h SDCClabel.h \
+  SDCCBBlock.h SDCCloop.h SDCCcse.h SDCCcflow.h SDCCdflow.h SDCClrange.h \
+  SDCCptropt.h SDCCopt.h SDCCglue.h SDCCpeeph.h SDCCdebug.h SDCCutil.h \
+  SDCCasm.h port.h SDCCargs.h ./../support/Util/newalloc.h \
+  ./../support/Util/dbuf_string.h ./../support/Util/dbuf.h
+NewAlloc.o: ../support/Util/NewAlloc.c ../support/Util/newalloc.h
+MySystem.o: ../support/Util/MySystem.c ./SDCCglobl.h ./SDCCset.h \
+  ../sdccconf.h ./SDCCerr.h ./SDCCutil.h ./SDCChasht.h \
+  ./../support/Util/dbuf.h ../support/Util/MySystem.h ./SDCCset.h \
+  ../support/Util/newalloc.h
+BuildCmd.o: ../support/Util/BuildCmd.c ./SDCCset.h \
+  ../support/Util/BuildCmd.h
+dbuf.o: ../support/Util/dbuf.c ../support/Util/dbuf.h
+dbuf_string.o: ../support/Util/dbuf_string.c \
+  ../support/Util/dbuf_string.h ../support/Util/dbuf.h
+findme.o: ../support/Util/findme.c ../support/Util/system.h \
+  ../support/Util/findme.h

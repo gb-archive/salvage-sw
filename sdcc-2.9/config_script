@@ -1,0 +1,19 @@
+./configure -C \
+--prefix=''/sdcc'' \
+--datarootdir=''/sdcc'' \
+--disable-mcs51-port \
+--disable-avr-port \
+--disable-ds390-port \
+--disable-ds400-port \
+--disable-hc08-port \
+--disable-pic-port \
+--disable-pic16-port \
+--disable-xa51-port \
+--disable-packihx \
+--disable-ucsim \
+docdir=''\${datarootdir}/doc'' \
+include_dir_suffix=''include'' \
+lib_dir_suffix=''lib'' \
+sdccconf_h_dir_separator=''\\\\'' \
+CC=''gcc\ -mno-cygwin'' \
+CXX=''g++\ -mno-cygwin''

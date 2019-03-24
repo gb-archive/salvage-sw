@@ -1,0 +1,21 @@
+XL
+H 7 areas 2 global symbols
+M _strpbrk
+O -mgbz80
+S _strchr Ref0000
+A _CODE size 38 flags 0
+S _strpbrk Def0000
+A _DATA size 0 flags 0
+A _OVERLAY size 0 flags 0
+A _HOME size 0 flags 0
+A _GSINIT size 0 flags 0
+A _GSFINAL size 0 flags 0
+A _CABS size 0 flags 0
+T 00 00 F5 F8 04 2A 5E F8 00 22 73 F8 00 5E 23 56
+R 00 00 00 00
+T 0E 00 1A 4F 41 AF B1 CA 32 00 C5 33 F8 07 2A 66
+R 00 00 00 00 00 08 00 00
+T 1C 00 6F E5 CD 00 00 E8 03 42 4B 79 B0 CA 09 00
+R 00 00 00 00 02 05 00 00 00 0E 00 00
+T 2A 00 F8 00 5E 23 56 C3 35 00 11 00 00 E8 02 C9
+R 00 00 00 00 00 08 00 00

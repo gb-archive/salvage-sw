@@ -1,0 +1,15 @@
+XL
+H 7 areas 2 global symbols
+M _fslt
+O -mgbz80
+S .fscmp Ref0000
+A _CODE size 9 flags 0
+S ___fslt Def0000
+A _DATA size 0 flags 0
+A _OVERLAY size 0 flags 0
+A _HOME size 0 flags 0
+A _GSINIT size 0 flags 0
+A _GSFINAL size 0 flags 0
+A _CABS size 0 flags 0
+T 00 00 CD 00 00 11 00 00 D0 1C C9
+R 00 00 00 00 02 03 00 00

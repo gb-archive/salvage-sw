@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="all"
+	ProjectGUID="{C24D0ABF-7FF7-4557-B06F-0D5DBBA38D17}"
+	SccProjectName=""
+	SccLocalPath=""
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory=".\Debug"
+			IntermediateDirectory=".\Debug"
+			ConfigurationType="10"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCMIDLTool"
+				TypeLibraryName=".\Debug/all.tlb"
+				HeaderFileName=""/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory=".\Release"
+			IntermediateDirectory=".\Release"
+			ConfigurationType="10"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCMIDLTool"
+				TypeLibraryName=".\Release/all.tlb"
+				HeaderFileName=""/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Info"
+			Filter=". .txt">
+			<File
+				RelativePath="ChangeLog">
+			</File>
+		</Filter>
+		<File
+			RelativePath="bin_vc\as-gbz80.exe">
+			<FileConfiguration
+				Name="Debug|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\as-gbz80.exe bin /y &gt; nul
+"
+					Outputs="bin\as-gbz80.exe"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\as-gbz80.exe bin /y &gt; nul
+"
+					Outputs="bin\as-gbz80.exe"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="bin_vc\as-hc08.exe">
+			<FileConfiguration
+				Name="Debug|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\as-hc08.exe bin /y &gt; nul
+"
+					Outputs="bin\as-hc08.exe"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\as-hc08.exe bin /y &gt; nul
+"
+					Outputs="bin\as-hc08.exe"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="bin_vc\as-z80.exe">
+			<FileConfiguration
+				Name="Debug|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\as-z80.exe bin /y &gt; nul
+"
+					Outputs="bin\as-z80.exe"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\as-z80.exe bin /y &gt; nul
+"
+					Outputs="bin\as-z80.exe"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="bin_vc\aslink.exe">
+			<FileConfiguration
+				Name="Debug|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\aslink.exe bin /y &gt; nul
+"
+					Outputs="bin\aslink.exe"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\aslink.exe bin /y &gt; nul
+"
+					Outputs="bin\aslink.exe"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="bin_vc\asx8051.exe">
+			<FileConfiguration
+				Name="Debug|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\asx8051.exe  bin /y &gt; nul
+"
+					Outputs="bin\asx8051.exe"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\asx8051.exe  bin /y &gt; nul
+"
+					Outputs="bin\asx8051.exe"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="bin_vc\link-gbz80.exe">
+			<FileConfiguration
+				Name="Debug|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\link-gbz80.exe  bin /y &gt; nul
+"
+					Outputs="bin\link-gbz80.exe"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\link-gbz80.exe  bin /y &gt; nul
+"
+					Outputs="bin\link-gbz80.exe"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="bin_vc\link-hc08.exe">
+			<FileConfiguration
+				Name="Debug|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\link-hc08.exe  bin /y &gt; nul
+"
+					Outputs="bin\link-hc08.exe"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\link-hc08.exe  bin /y &gt; nul
+"
+					Outputs="bin\link-hc08.exe"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="bin_vc\link-z80.exe">
+			<FileConfiguration
+				Name="Debug|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\link-z80.exe  bin /y &gt; nul
+"
+					Outputs="bin\link-z80.exe"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\link-z80.exe  bin /y &gt; nul
+"
+					Outputs="bin\link-z80.exe"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="bin_vc\packihx.exe">
+			<FileConfiguration
+				Name="Debug|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\packihx.exe  bin /y &gt; nul
+"
+					Outputs="bin\packihx.exe"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\packihx.exe  bin /y &gt; nul
+"
+					Outputs="bin\packihx.exe"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="bin_vc\sdcc.exe">
+			<FileConfiguration
+				Name="Debug|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\sdcc.exe  bin /y &gt; nul
+"
+					Outputs="bin\sdcc.exe"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\sdcc.exe  bin /y &gt; nul
+"
+					Outputs="bin\sdcc.exe"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="bin_vc\sdcclib.exe">
+			<FileConfiguration
+				Name="Debug|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\sdcclib.exe  bin /y &gt; nul
+"
+					Outputs="bin\sdcclib.exe"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\sdcclib.exe  bin /y &gt; nul
+"
+					Outputs="bin\sdcclib.exe"/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="bin_vc\sdcpp.exe">
+			<FileConfiguration
+				Name="Debug|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\sdcpp.exe  bin /y &gt; nul
+"
+					Outputs="bin\sdcpp.exe"/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32">
+				<Tool
+					Name="VCCustomBuildTool"
+					CommandLine="copy bin_vc\sdcpp.exe  bin /y &gt; nul
+"
+					Outputs="bin\sdcpp.exe"/>
+			</FileConfiguration>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

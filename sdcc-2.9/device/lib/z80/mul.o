@@ -1,0 +1,13 @@
+XL
+H 1 areas 4 global symbols
+A _CODE size 24 flags 0
+S __mulint_rrx_s Def0000
+S __mulint_rrx_hds Def000C
+S __mul16 Def000E
+S __muluchar_rrx_hds Def000C
+T 00 00 21 02 00 39 5E 23 56 23 7E 23 66 6F 44 4D
+R 00 00 00 00
+T 0E 00 21 00 00 78 06 10 B7 20 03 06 08 79 29 CB
+R 00 00 00 00
+T 1C 00 11 17 30 01 19 10 F7 C9
+R 00 00 00 00

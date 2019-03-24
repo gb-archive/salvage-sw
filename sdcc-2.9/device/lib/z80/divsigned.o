@@ -1,0 +1,23 @@
+XL
+H 1 areas A global symbols
+S __div16 Ref0000
+S __div8 Ref0000
+A _CODE size 44 flags 0
+S __modsint_rrx_s Def0030
+S __divsint_rrx_s Def001C
+S __modsint_rrx_hds Def003C
+S __divsint_rrx_hds Def0028
+S __modschar_rrx_s Def000E
+S __divschar_rrx_s Def0000
+S __modschar_rrx_hds Def0015
+S __divschar_rrx_hds Def0007
+T 00 00 21 03 00 39 5E 2B 6E 4D CD 00 00 69 60 C9
+R 00 00 00 00 02 0B 01 00
+T 0E 00 21 03 00 39 5E 2B 6E 4D CD 00 00 6B 62 C9
+R 00 00 00 00 02 0B 01 00
+T 1C 00 21 05 00 39 56 2B 5E 2B 7E 2B 6E 67 44 4D
+R 00 00 00 00
+T 2A 00 CD 00 00 69 60 C9 21 05 00 39 56 2B 5E 2B
+R 00 00 00 00 02 03 00 00
+T 38 00 7E 2B 6E 67 44 4D CD 00 00 6B 62 C9
+R 00 00 00 00 02 09 00 00

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="gbtestlib"
+	ProjectGUID="{D6236328-D458-46A7-A965-FBA616D48B73}"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="make"
+				ReBuildCommandLine="make -a"
+				CleanCommandLine="make clean"
+				Output="$(ProjectName).gb"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				Output="gbtestlib.gb"/>
+		</Configuration>
+		<Configuration
+			Name="Simulate|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="make"
+				ReBuildCommandLine="make -a"
+				CleanCommandLine="make clean"
+				Output="$(ProjectName).gb"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Headers"
+			Filter="">
+		</Filter>
+		<Filter
+			Name="source"
+			Filter="">
+			<File
+				RelativePath=".\gbtestlib.c">
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\gbtestlib.map">
+		</File>
+		<File
+			RelativePath=".\makefile">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

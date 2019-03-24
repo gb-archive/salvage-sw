@@ -1,0 +1,14 @@
+XL
+H 7 areas 1 global symbols
+M exponentf
+O -mgbz80
+A _CODE size A flags 0
+S _exponentf Def0000
+A _DATA size 0 flags 0
+A _OVERLAY size 0 flags 0
+A _HOME size 0 flags 0
+A _GSINIT size 0 flags 0
+A _GSFINAL size 0 flags 0
+A _CABS size 0 flags 0
+T 00 00 F8 05 5E 2B 7E CB 17 CB 13 C9
+R 00 00 00 00

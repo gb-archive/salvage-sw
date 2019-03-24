@@ -1,0 +1,17 @@
+CC=lcc '-Wf-g,;' -Wa-l -Wl-m -c
+LINK=lcc '-Wf-g,;' -Wa-l -Wl-m
+
+.c.o:
+	$(CC) -o $@ $<
+
+.s.o:
+	$(CC) -o $@ $<
+
+.o.gb:
+	$(LINK) -o $@ $**
+
+sound.gb : sound.o
+	$(LINK) -o $@ $**
+
+sound.o : sound.c
+

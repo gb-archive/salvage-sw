@@ -1,0 +1,135 @@
+;	floating point support routines
+;	used in	more than one module
+
+;	floating point format
+;	1 bit sign 0 =>	positive, 1	=> negative
+;	8 bits exponent	in excess 127 notation
+;	23 bits	- significand leading 1	bit	implied
+
+	.area	_CODE
+
+.chkzero::
+	;; hl -	address	of low order byte
+	;; b  -	number of bytes	to check
+	;; note	- little endian	means byte with	lowest address !
+	;; return z	flag
+	xor		a
+	ld		c,b
+4$:	cp		(hl)
+	ret		nz
+	inc		hl
+	dec		c
+	jr		nz,4$
+	ret
+
+.unpack::
+	;; unpack bits of floating point value
+	;; entry
+	;;		HL = address of	high order byte	(highest address)
+	;; exit
+	;;		A  = returned exponent
+	;;		carry =	sign
+	;;
+	push	hl
+	ld		a,(hl-)		; u3
+	ld		c,a
+	ld		a,(hl)		; u2
+	set		7,(hl)		; set msb of significand to	1
+	rla					; leave	lsb	of exp in carry
+	ld		a,c
+	rla					; add lsb to exp - leave sign in carry
+	pop		hl
+	ld		(hl),a		; save exponent	in u3
+	ret
+
+    .if 0
+zero:
+	.db		0,0,0,0x80
+
+.cmp:
+    ;; de contains address of u (msb)
+    ;; hl contains address of v (msb)
+    ;; on return
+    ;; u > v    !z & !c
+    ;; u == v   z
+    ;; u < v    c
+    ld      a,(de)
+    cp     (hl)
+    ret     nz
+
+    dec     de
+    dec     hl
+    ld      a,(de)
+    cp     (hl)
+    ret     nz
+    
+    dec     de
+    dec     hl
+    ld      a,(de)
+    cp     (hl)
+    ret     nz
+    
+    dec     de
+    dec     hl
+    ld      a,(de)
+    cp      (hl)
+    ret
+    .endif
+    
+.fixsign::
+    ;; enter b  = number of bytes in float - 1
+    ;;       hl = address of float - lsb
+    ;; return Z flag indicates value is zero
+    
+    ld      b,#3
+    call    .chkzero
+    ret     nz
+    
+    ld      a,(hl)      ; check high order byte
+    rl      a           ; (including -0.0 )
+    ret     nz
+    ld      (hl),a      ; it's - 0.0 change to 0.0
+    
+    ret
+
+    .globl  .cmp_n
+    
+.fscmp::
+	;; parameters passed on	stack u, v
+	;; return value	in flags according to the following	key
+	;; u > v	!z & !c <==> !(z || c)
+	;; u ==	v	z
+	;; u < v	c
+	;; u >=	v	!c
+	;; u <=	v	z || c
+
+	ra1	=	0
+	ra	=	ra1	+ 2
+	u	=	ra + 2
+	v	=	u +	4
+
+	lda		hl,v(sp)
+	call    .fixsign
+	lda		hl,v(sp)
+	call    .fixsign
+	
+	ld      b,#4        ; for .cmp_n
+	lda		hl,u+3(sp)
+	bit     7,(hl)
+	jr      z,1$
+	
+	lda		hl,v+3(sp)
+	bit     7,(hl)
+	jr      z,1$
+
+	lda		hl,v+3(sp)
+	ld		d,h
+	ld		e,l
+	lda		hl,u+3(sp)
+	jp  	.cmp_n
+
+1$: lda		hl,u+3(sp)
+	ld		d,h
+	ld		e,l
+	lda		hl,v+3(sp)
+	jp  	.cmp_n

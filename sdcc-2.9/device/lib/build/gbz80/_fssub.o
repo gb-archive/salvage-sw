@@ -1,0 +1,15 @@
+XL
+H 7 areas 2 global symbols
+M _fssub
+O -mgbz80
+S ___fsadd Ref0000
+A _CODE size B flags 0
+S ___fssub Def0000
+A _DATA size 0 flags 0
+A _OVERLAY size 0 flags 0
+A _HOME size 0 flags 0
+A _GSINIT size 0 flags 0
+A _GSFINAL size 0 flags 0
+A _CABS size 0 flags 0
+T 00 00 F8 09 CB 16 3F CB 1E C3 00 00 C9
+R 00 00 00 00 02 0A 00 00

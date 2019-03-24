@@ -1,0 +1,26 @@
+XL
+H 7 areas 5 global symbols
+M _modulong
+O -mgbz80
+S _errno Ref0000
+S .chkzero Ref0000
+S .zero_n Ref0000
+S .div_n Ref0000
+A _CODE size 46 flags 0
+S __modulong Def0000
+A _DATA size 0 flags 0
+A _OVERLAY size 0 flags 0
+A _HOME size 0 flags 0
+A _GSINIT size 0 flags 0
+A _GSFINAL size 0 flags 0
+A _CABS size 0 flags 0
+T 00 00 E8 F8 06 04 F8 0A CD 00 00 20 08 AF 5F 57
+R 00 00 00 00 02 09 01 00
+T 0E 00 6F 67 C3 43 00 F8 0E CD 00 00 20 0F 3E 21
+R 00 00 00 00 00 05 00 00 02 0A 01 00
+T 1C 00 EA 00 00 3E FF 5F 57 6F 26 7F C3 43 00 F8
+R 00 00 00 00 02 03 00 00 00 0D 00 00
+T 2A 00 0E E5 F8 0C E5 F8 08 E5 F8 06 E5 CD 00 00
+R 00 00 00 00 02 0E 03 00
+T 38 00 E8 08 F8 00 2A 5F 2A 57 2A 66 6F E8 08 C9
+R 00 00 00 00

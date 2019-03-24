@@ -1,0 +1,25 @@
+XL
+H 7 areas 4 global symbols
+M _calloc
+O -mgbz80
+S _malloc Ref0000
+S __mulint_rrx_s Ref0000
+S _memset Ref0000
+A _CODE size 40 flags 0
+S _calloc Def0000
+A _DATA size 0 flags 0
+A _OVERLAY size 0 flags 0
+A _HOME size 0 flags 0
+A _GSINIT size 0 flags 0
+A _GSFINAL size 0 flags 0
+A _CABS size 0 flags 0
+T 00 00 F5 F8 06 2A 66 6F E5 F8 06 2A 66 6F E5 CD
+R 00 00 00 00
+T 0E 00 00 00 E8 04 F8 01 72 2B 73 F8 00 2A 66 6F
+R 00 00 00 00 02 02 01 00
+T 1C 00 E5 CD 00 00 E8 02 42 4B 79 B0 CA 3B 00 C5
+R 00 00 00 00 02 04 00 00 00 0D 00 00
+T 2A 00 F8 02 2A 66 6F E5 3E 00 F5 33 C5 CD 00 00
+R 00 00 00 00 02 0E 02 00
+T 38 00 E8 05 C1 59 50 E8 02 C9
+R 00 00 00 00

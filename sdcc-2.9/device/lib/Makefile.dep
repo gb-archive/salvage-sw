@@ -1,0 +1,229 @@
+_atof.rel: _atof.c ../../device/include/ctype.h \
+  ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h \
+  ../../device/include/stdlib.h ../../device/include/malloc.h \
+  ../../device/include/stddef.h ../../device/include/stdbool.h
+_schar2fs.rel: _schar2fs.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_sint2fs.rel: _sint2fs.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_slong2fs.rel: _slong2fs.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_uchar2fs.rel: _uchar2fs.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_uint2fs.rel: _uint2fs.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_ulong2fs.rel: _ulong2fs.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fs2schar.rel: _fs2schar.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fs2sint.rel: _fs2sint.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fs2slong.rel: _fs2slong.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fs2uchar.rel: _fs2uchar.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fs2uint.rel: _fs2uint.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fs2ulong.rel: _fs2ulong.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fsadd.rel: _fsadd.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fsdiv.rel: _fsdiv.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fsmul.rel: _fsmul.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fssub.rel: _fssub.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fseq.rel: _fseq.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fsgt.rel: _fsgt.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fslt.rel: _fslt.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fsneq.rel: _fsneq.c ../../device/include/float.h \
+  ../../device/include/limits.h
+fabsf.rel: fabsf.c ../../device/include/math.h \
+  ../../device/include/errno.h
+frexpf.rel: frexpf.c ../../device/include/math.h \
+  ../../device/include/errno.h
+ldexpf.rel: ldexpf.c ../../device/include/math.h \
+  ../../device/include/errno.h
+expf.rel: expf.c ../../device/include/math.h ../../device/include/errno.h \
+  ../../device/include/stdbool.h
+powf.rel: powf.c ../../device/include/math.h ../../device/include/errno.h
+sincosf.rel: sincosf.c ../../device/include/math.h \
+  ../../device/include/errno.h ../../device/include/stdbool.h
+sinf.rel: sinf.c ../../device/include/math.h
+cosf.rel: cosf.c ../../device/include/math.h
+logf.rel: logf.c ../../device/include/math.h ../../device/include/errno.h
+log10f.rel: log10f.c ../../device/include/math.h \
+  ../../device/include/errno.h
+sqrtf.rel: sqrtf.c ../../device/include/math.h \
+  ../../device/include/errno.h
+tancotf.rel: tancotf.c ../../device/include/math.h \
+  ../../device/include/errno.h
+tanf.rel: tanf.c ../../device/include/math.h
+cotf.rel: cotf.c ../../device/include/math.h ../../device/include/errno.h
+asincosf.rel: asincosf.c ../../device/include/math.h \
+  ../../device/include/errno.h
+asinf.rel: asinf.c ../../device/include/math.h
+acosf.rel: acosf.c ../../device/include/math.h
+atanf.rel: atanf.c ../../device/include/math.h \
+  ../../device/include/errno.h
+atan2f.rel: atan2f.c ../../device/include/math.h \
+  ../../device/include/errno.h
+sincoshf.rel: sincoshf.c ../../device/include/math.h \
+  ../../device/include/errno.h ../../device/include/stdbool.h
+sinhf.rel: sinhf.c ../../device/include/math.h
+coshf.rel: coshf.c ../../device/include/math.h
+tanhf.rel: tanhf.c ../../device/include/math.h \
+  ../../device/include/errno.h
+floorf.rel: floorf.c ../../device/include/math.h
+ceilf.rel: ceilf.c ../../device/include/math.h
+modff.rel: modff.c ../../device/include/math.h
+errno.rel: errno.c
+_fscmp.rel: _fscmp.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fsget1arg.rel: _fsget1arg.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fsget2args.rel: _fsget2args.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fsnormalize.rel: _fsnormalize.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fsreturnval.rel: _fsreturnval.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fsrshift.rel: _fsrshift.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_fsswapargs.rel: _fsswapargs.c ../../device/include/float.h \
+  ../../device/include/limits.h
+_logexpf.rel: _logexpf.c ../../device/include/math.h
+_divsint.rel: _divsint.c ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h
+_divuint.rel: _divuint.c ../../device/include/stdbool.h
+_modsint.rel: _modsint.c ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h
+_moduint.rel: _moduint.c
+_mulint.rel: _mulint.c
+_divslong.rel: _divslong.c ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h
+_modslong.rel: _modslong.c ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h
+_modulong.rel: _modulong.c
+_divulong.rel: _divulong.c ../../device/include/stdbool.h
+_mullong.rel: _mullong.c
+_atoi.rel: _atoi.c
+_atol.rel: _atol.c
+abs.rel: abs.c ../../device/include/stdlib.h \
+  ../../device/include/malloc.h ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h \
+  ../../device/include/stddef.h
+labs.rel: labs.c ../../device/include/stdlib.h \
+  ../../device/include/malloc.h ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h \
+  ../../device/include/stddef.h
+rand.rel: rand.c ../../device/include/stdlib.h \
+  ../../device/include/malloc.h ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h \
+  ../../device/include/stddef.h
+_iscntrl.rel: _iscntrl.c
+_isdigit.rel: _isdigit.c
+_isgraph.rel: _isgraph.c
+_isprint.rel: _isprint.c
+_ispunct.rel: _ispunct.c ../../device/include/ctype.h \
+  ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h
+_isspace.rel: _isspace.c
+_islower.rel: _islower.c
+_isupper.rel: _isupper.c
+_isxdigit.rel: _isxdigit.c
+_strcat.rel: _strcat.c ../../device/include/string.h
+_strchr.rel: _strchr.c ../../device/include/string.h
+_strcmp.rel: _strcmp.c ../../device/include/string.h \
+  ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h
+_strcpy.rel: _strcpy.c ../../device/include/string.h \
+  ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h
+_strcspn.rel: _strcspn.c ../../device/include/string.h
+_strncat.rel: _strncat.c ../../device/include/string.h
+_strncmp.rel: _strncmp.c ../../device/include/string.h
+_strncpy.rel: _strncpy.c ../../device/include/string.h
+_strpbrk.rel: _strpbrk.c ../../device/include/string.h
+_strrchr.rel: _strrchr.c ../../device/include/string.h
+_strspn.rel: _strspn.c ../../device/include/string.h
+_strstr.rel: _strstr.c ../../device/include/string.h
+_strtok.rel: _strtok.c ../../device/include/string.h
+_memcmp.rel: _memcmp.c ../../device/include/string.h
+_memcpy.rel: _memcpy.c ../../device/include/string.h \
+  ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h
+_memset.rel: _memset.c ../../device/include/string.h
+_calloc.rel: _calloc.c ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h \
+  ../../device/include/malloc.h ../../device/include/stddef.h \
+  ../../device/include/string.h
+_malloc.rel: _malloc.c ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h \
+  ../../device/include/malloc.h ../../device/include/stddef.h
+_realloc.rel: _realloc.c ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h \
+  ../../device/include/malloc.h ../../device/include/stddef.h \
+  ../../device/include/string.h
+_free.rel: _free.c ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h \
+  ../../device/include/malloc.h ../../device/include/stddef.h
+printf_large.rel: printf_large.c ../../device/include/stdarg.h \
+  ../../device/include/string.h ../../device/include/ctype.h \
+  ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h \
+  ../../device/include/stdio.h ../../device/include/stdbool.h
+puts.rel: puts.c
+gets.rel: gets.c ../../device/include/stdio.h \
+  ../../device/include/stdarg.h ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h
+assert.rel: assert.c ../../device/include/stdio.h \
+  ../../device/include/stdarg.h ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h \
+  ../../device/include/stdlib.h ../../device/include/malloc.h \
+  ../../device/include/stddef.h
+time.rel: time.c ../../device/include/stdio.h \
+  ../../device/include/stdarg.h ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h ../../device/include/time.h
+_autobaud.rel: _autobaud.c ../../device/include/mcs51/8051.h
+_bp.rel: _bp.c
+_decdptr.rel: _decdptr.c
+_gptrget.rel: _gptrget.c
+_gptrgetc.rel: _gptrgetc.c
+_gptrput.rel: _gptrput.c
+_ser.rel: _ser.c ../../device/include/mcs51/8052.h \
+  ../../device/include/mcs51/8051.h ../../device/include/ser.h
+_setjmp.rel: _setjmp.c ../../device/include/mcs51/8051.h \
+  ../../device/include/setjmp.h
+serial.rel: serial.c ../../device/include/mcs51/8052.h \
+  ../../device/include/mcs51/8051.h
+_itoa.rel: _itoa.c
+_ltoa.rel: _ltoa.c
+_spx.rel: _spx.c
+_startup.rel: _startup.c
+_strlen.rel: _strlen.c
+_memmove.rel: _memmove.c ../../device/include/string.h \
+  ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h
+_heap.rel: _heap.c
+sprintf.rel: sprintf.c ../../device/include/stdarg.h \
+  ../../device/include/stdio.h ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h
+vprintf.rel: vprintf.c ../../device/include/stdarg.h \
+  ../../device/include/stdio.h ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h
+printf_fast.rel: printf_fast.c
+printf_fast_f.rel: printf_fast_f.c ../../device/include/float.h \
+  ../../device/include/limits.h
+printf_tiny.rel: printf_tiny.c
+printfl.rel: printfl.c ../../device/include/stdarg.h \
+  ../../device/include/stdio.h ../../device/include/sdcc-lib.h \
+  ../../device/include/asm/default/features.h \
+  ../../device/include/stdlib.h ../../device/include/malloc.h \
+  ../../device/include/stddef.h ../../device/include/mcs51/8051.h
+bpx.rel: bpx.c

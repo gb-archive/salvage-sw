@@ -1,0 +1,19 @@
+XL
+H 7 areas 2 global symbols
+M _setjmp
+O -mgbz80
+A _CODE size 20 flags 0
+S _longjmp Def000F
+S _setjmp Def0000
+A _DATA size 0 flags 0
+A _OVERLAY size 0 flags 0
+A _HOME size 0 flags 0
+A _GSINIT size 0 flags 0
+A _GSFINAL size 0 flags 0
+A _CABS size 0 flags 0
+T 00 00 F8 00 54 5D F8 02 1A 13 22 1A 77 11 00 00
+R 00 00 00 00
+T 0E 00 C9 F8 02 54 5D F8 02 1A 13 22 1A 77 F8 04
+R 00 00 00 00
+T 1C 00 5E 23 56 C9
+R 00 00 00 00

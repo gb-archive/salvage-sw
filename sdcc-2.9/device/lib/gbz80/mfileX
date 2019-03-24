@@ -1,0 +1,316 @@
+.SUFFIXES :	.o .c .s .gb .lib
+
+SDCC = "C:/Program Files/SDCC"
+LIBDIR = $(SDCC)/lib/gbz80
+.SOURCE.c :	.// ..//
+
+CC = $(SDCC)/bin/sdcc.bat --stack-auto --vc	-mgbz80	-I../include
+AS = $(SDCC)/bin/as-gbz80 -lpo
+ 
+.c.o:
+	$(CC) -c -o	$@ $<
+
+.s.o:
+	$(AS) $@ $<
+
+OBJS = \
+_atof.o	\
+_atoi.o	\
+_atol.o	\
+_divsint.o \
+_divslong.o	\
+_divuint.o \
+_divulong.o	\
+_fs2schar.o	\
+_fs2sint.o \
+_fs2slong.o	\
+_fs2uchar.o	\
+_fs2uint.o \
+_fs2ulong.o	\
+_fsadd.o \
+_fscmp.o \
+_fsdiv.o \
+_fseq.o	\
+_fsget1arg.o \
+_fsget2args.o \
+_fsgt.o	\
+_fslt.o	\
+_fsmul.o \
+_fsneq.o \
+_fsnormalize.o \
+_fsreturnval.o \
+_fsrshift.o	\
+_fssub.o \
+_fsswapargs.o \
+_iscntrl.o \
+_isdigit.o \
+_isgraph.o \
+_islower.o \
+_isprint.o \
+_ispunct.o \
+_isspace.o \
+_isupper.o \
+_isxdigit.o	\
+_itoa.o	\
+_logexpf.o \
+_ltoa.o	\
+_modsint.o \
+_modslong.o	\
+_moduint.o \
+_modulong.o	\
+_mulint.o \
+_mullong.o \
+_schar2fs.o	\
+_sint2fs.o \
+_slong2fs.o	\
+_startup.o \
+_strcat.o \
+_strchr.o \
+_strcspn.o \
+_strlen.o \
+_strncat.o \
+_strncmp.o \
+_strncpy.o \
+_strpbrk.o \
+_strrchr.o \
+_strspn.o \
+_strstr.o \
+_strtok.o \
+_uchar2fs.o	\
+_uint2fs.o \
+_ulong2fs.o	\
+abs.o \
+acosf.o	\
+asincosf.o \
+asinf.o	\
+assert.o \
+atan2f.o \
+atanf.o	\
+calloc.o \
+ceilf.o	\
+cosf.o \
+coshf.o	\
+cotf.o \
+errno.o	\
+expf.o \
+fabsf.o	\
+floorf.o \
+free.o \
+frexpf.o \
+gets.o \
+labs.o \
+ldexpf.o \
+log10f.o \
+logf.o \
+malloc.o \
+modff.o	\
+powf.o \
+printf_large.o \
+puts.o \
+realloc.o \
+sincosf.o \
+sincoshf.o \
+sinf.o \
+sinhf.o	\
+sprintf.o \
+sqrtf.o	\
+tancotf.o \
+tanf.o \
+tanhf.o	\
+time.o \
+vprintf.o \
+\
+float.o	\
+zero_n.o \
+mul_n.o	\
+add_n.o	\
+sub_n.o	\
+cmp_n.o	\
+div_n.o	\
+sla_n.o	\
+sra_n.o	\
+inc_n.o \
+neg_n.o \
+set_n.o \
+div.o \
+fstubs.o \
+heap.o \
+mul.o \
+shift.o	\
+stubs.o \
+_memcmp.o \
+_memcpy.o \
+_memmove.o \
+_memset.o\
+_setjmp.o \
+
+#printf_fast.o \
+#printfl.o \
+#ser_ir.o \
+#ser_ir_cts_rts.o \
+#serial.o \
+#printf_tiny.o \
+#putchar.o \
+#printf.o \
+
+gbz80.lib :	$(OBJS)
+	rm -f gbz80.lib
+	for	i in *.o ; do echo $$i >> gbz80.lib; done
+	cp *.o *.lib $(LIBDIR)
+
+clean :
+	rm -f *.o *.lst	*.map *.gb *~ *.rel	*.cdb *.ihx	*.lnk *.sym	*.asm
+
+float.o : float.s
+zero_n.o : zero_n.s
+mul_n.o : mul_n.s
+add_n.o : add_n.s
+sub_n.o : sub_n.s
+cmp_n.o : cmp_n.s
+div_n.o : div_n.s
+sla_n.o : sla_n.s
+sra_n.o : sra_n.s
+inc_n.o : inc_n.s
+neg_n.o : neg_n.s
+set_n.o : set_n.s
+
+div.o : div.s
+mul.o : mul.s
+fstubs.o : fstubs.s
+heap.o : heap.s
+putchar.o : putchar.s
+shift.o : shift.s
+stubs.o : stubs.s
+printf.o : printf.c
+_memcmp.o : _memcmp.s
+_memcpy.o : _memcpy.s
+_memset.o : _memset.s
+
+_atof.o : _atof.c
+_atoi.o : _atoi.c
+_atol.o : _atol.c
+_autobaud.o : _autobaud.c
+_bp.o : _bp.c
+_decdptr.o : _decdptr.c
+#_divsint.o : _divsint.c
+_divslong.o : _divslong.c
+#_divuint.o : _divuint.c
+_fs2schar.o : _fs2schar.c
+_fs2sint.o : _fs2sint.c
+_fs2slong.o : _fs2slong.c
+_fs2uchar.o : _fs2uchar.c
+_fs2uint.o : _fs2uint.c
+_fs2ulong.o : _fs2ulong.c
+_fsadd.o : _fsadd.c
+_fscmp.o : _fscmp.c
+_fsdiv.o : _fsdiv.c
+_fseq.o : _fseq.c
+_fsget1arg.o : _fsget1arg.c
+_fsget2args.o : _fsget2args.c
+_fsgt.o : _fsgt.c
+_fslt.o : _fslt.c
+_fsmul.o : _fsmul.c
+_fsneq.o : _fsneq.c
+_fsnormalize.o : _fsnormalize.c
+_fsreturnval.o : _fsreturnval.c
+_fsrshift.o : _fsrshift.c
+_fssub.o : _fssub.c
+_fsswapargs.o : _fsswapargs.c
+_gptrget.o : _gptrget.c
+_gptrgetc.o : _gptrgetc.c
+_gptrput.o : _gptrput.c
+_iscntrl.o : _iscntrl.c
+_isdigit.o : _isdigit.c
+_isgraph.o : _isgraph.c
+_islower.o : _islower.c
+_isprint.o : _isprint.c
+_ispunct.o : _ispunct.c
+_isspace.o : _isspace.c
+_isupper.o : _isupper.c
+_isxdigit.o : _isxdigit.c
+_itoa.o : _itoa.c
+_logexpf.o : _logexpf.c
+_ltoa.o : _ltoa.c
+#_memcmp.o :    _memcmp.c
+#_memcpy.o :    _memcpy.c
+_memmove.o : _memmove.c
+#_memset.o :    _memset.c
+_modsint.o : _modsint.c
+_modslong.o : _modslong.c
+_moduint.o : _moduint.c
+_modulong.o : _modulong.c
+_mulint.o : _mulint.c
+_mullong.o : _mullong.c
+_schar2fs.o : _schar2fs.c
+_ser.o : _ser.c
+_setjmp.o : _setjmp.c
+_sint2fs.o : _sint2fs.c
+_slong2fs.o : _slong2fs.c
+_spx.o : _spx.c
+_startup.o : _startup.c
+_strcat.o : _strcat.c
+_strchr.o : _strchr.c
+_strcmp.o : _strcmp.c
+_strcpy.o : _strcpy.c
+_strcspn.o : _strcspn.c
+_strlen.o : _strlen.c
+_strncat.o : _strncat.c
+_strncmp.o : _strncmp.c
+_strncpy.o : _strncpy.c
+_strpbrk.o : _strpbrk.c
+_strrchr.o : _strrchr.c
+_strspn.o : _strspn.c
+_strstr.o : _strstr.c
+_strtok.o : _strtok.c
+_uchar2fs.o : _uchar2fs.c
+_uint2fs.o : _uint2fs.c
+_ulong2fs.o : _ulong2fs.c
+
+abs.o : abs.c
+acosf.o : acosf.c
+asincosf.o : asincosf.c
+asinf.o : asinf.c
+assert.o : assert.c
+atan2f.o : atan2f.c
+atanf.o : atanf.c
+bpx.o : bpx.c
+calloc.o : calloc.c
+ceilf.o : ceilf.c
+cosf.o : cosf.c
+coshf.o : coshf.c
+cotf.o : cotf.c
+errno.o : errno.c
+expf.o : expf.c
+fabsf.o : fabsf.c
+floorf.o : floorf.c
+free.o : free.c
+frexpf.o : frexpf.c
+gets.o : gets.c
+labs.o : labs.c
+ldexpf.o : ldexpf.c
+log10f.o : log10f.c
+logf.o : logf.c
+malloc.o : malloc.c
+modff.o : modff.c
+powf.o : powf.c
+printf_fast.o : printf_fast.c
+printf_fast_f.o : printf_fast_f.c
+printf_large.o : printf_large.c
+printf_tiny.o : printf_tiny.c
+printfl.o : printfl.c
+puts.o : puts.c
+realloc.o : realloc.c
+ser_ir.o : ser_ir.c
+ser_ir_cts_rts.o : ser_ir_cts_rts.c
+serial.o : serial.c
+sincosf.o : sincosf.c
+sincoshf.o : sincoshf.c
+sinf.o : sinf.c
+sinhf.o : sinhf.c
+sprintf.o : sprintf.c
+sqrtf.o : sqrtf.c
+tancotf.o : tancotf.c
+tanf.o : tanf.c
+tanhf.o : tanhf.c
+time.o : time.c
+vprintf.o : vprintf.c

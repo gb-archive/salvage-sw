@@ -1,0 +1,8 @@
+XL
+H 1 areas 1 global symbols
+A _CODE size 19 flags 0
+S _memcpy Def0000
+T 00 00 F8 06 2A 4F 46 F8 04 5E 23 56 F8 02 2A 66
+R 00 00 00 00
+T 0E 00 6F 78 B1 C8 1A 13 77 0B 23 18 F6
+R 00 00 00 00

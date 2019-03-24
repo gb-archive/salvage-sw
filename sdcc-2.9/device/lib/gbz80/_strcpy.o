@@ -1,0 +1,8 @@
+XL
+H 1 areas 1 global symbols
+A _CODE size 12 flags 0
+S _strcpy Def0000
+T 00 00 F8 04 5E 23 56 F8 02 2A 66 6F 1A 13 77 A7
+R 00 00 00 00
+T 0E 00 C8 23 18 F8
+R 00 00 00 00

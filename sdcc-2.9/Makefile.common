@@ -1,0 +1,78 @@
+#
+#
+#
+
+# Version
+PACKAGE         = sdcc
+VERSION         = 2.9.0
+VERSIONHI       = 2
+VERSIONLO       = 9
+VERSIONP        = 0
+
+# Programs
+SHELL		= /bin/sh
+CC		=  gcc -mno-cygwin
+CPP		=  gcc -mno-cygwin -E
+RANLIB		= ranlib
+INSTALL		= /usr/bin/install -c
+YACC            = bison -y
+LEX             = flex
+AWK             = gawk
+STRIP           = strip
+prefix          = /sdcc
+exec_prefix     = ${prefix}
+bindir          = ${exec_prefix}/bin
+libdir          = ${exec_prefix}/lib
+datadir         = ${datarootdir}
+datarootdir     = /sdcc
+includedir      = ${prefix}/include
+mandir          = ${datarootdir}/man
+man1dir         = $(mandir)/man1
+man2dir         = $(mandir)/man2
+infodir         = ${datarootdir}/info
+docdir          = ${datarootdir}/doc
+DESTDIR         =
+
+include_dir_suffix = include
+lib_dir_suffix     = lib
+
+# Modules to enable/disable
+OPT_DISABLE_AVR   = 1
+OPT_DISABLE_DS390 = 1
+OPT_DISABLE_DS400 = 1
+OPT_DISABLE_HC08  = 1
+OPT_DISABLE_MCS51 = 1
+OPT_DISABLE_PIC   = 1
+OPT_DISABLE_PIC16 = 1
+OPT_DISABLE_XA51  = 1
+OPT_DISABLE_Z80   = 0
+
+OPT_DISABLE_UCSIM     = 1
+OPT_DISABLE_DEVICE_LIB= 0
+OPT_DISABLE_PACKIHX   = 1
+OPT_ENABLE_DOC        = 0
+OPT_DISABLE_SDCPP     = 0
+
+SLIB			= $(top_builddir)/support/Util
+
+EXEEXT          = .exe
+transform       = s,x,x,
+
+# Flags
+
+DEFS           += $(subs -DHAVE_CONFIG_H,,-DHAVE_CONFIG_H)
+CPPFLAGS       +=  $(INCLUDEFLAGS) -I. -I$(top_builddir) -I$(srcdir)/$(SLIB) -I$(srcdir)
+CFLAGS         += -Wall -pipe -ggdb -g -O2
+LDFLAGS        += 
+M_OR_MM         = -MM
+
+EXTRALIBS      += 
+
+# Shared settings between all the sub Makefiles
+# Done here so that we don't have to start a Make from the top levelport
+# directory.
+
+# Library compilation options
+CLEANSPEC = *.lst *.asm *.sym *~ *.cdb *.dep *.rul
+
+OBJ = $(SOURCES:.c=.o)

@@ -1,0 +1,19 @@
+XL
+H 7 areas 2 global symbols
+M _mullong
+O -mgbz80
+S .mul_n Ref0000
+A _CODE size 1F flags 0
+S __mullong Def0000
+A _DATA size 0 flags 0
+A _OVERLAY size 0 flags 0
+A _HOME size 0 flags 0
+A _GSINIT size 0 flags 0
+A _GSFINAL size 0 flags 0
+A _CABS size 0 flags 0
+T 00 00 E8 FC F8 0A E5 F8 08 E5 F8 04 E5 06 04 CD
+R 00 00 00 00
+T 0E 00 00 00 E8 06 F8 00 2A 5F 2A 57 2A 66 6F E8
+R 00 00 00 00 02 02 00 00
+T 1C 00 04 C9 C9
+R 00 00 00 00

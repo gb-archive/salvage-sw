@@ -1,0 +1,19 @@
+XL
+H 1 areas 6 global symbols
+S __mul16 Ref0000
+A _CODE size 3C flags 0
+S __muluschar_rrx_s Def001E
+S __mulsuchar_rrx_s Def0013
+S __mulschar_rrx_s Def0029
+S __muluchar_rrx_s Def0000
+S __mulschar_rrx_hds Def0030
+T 00 00 21 03 00 39 5E 2B 66 2E 00 55 06 08 29 30
+R 00 00 00 00
+T 0E 00 01 19 10 FA C9 21 03 00 39 5E 2B 4E 06 00
+R 00 00 00 00
+T 1C 00 18 17 21 03 00 39 4E 06 00 2B 5E 18 0C 21
+R 00 00 00 00
+T 2A 00 03 00 39 5E 2B 6E 4D 7D 17 9F 47 7B 17 9F
+R 00 00 00 00
+T 38 00 57 C3 00 00
+R 00 00 00 00 02 04 00 00

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="gbtest_banks"
+	ProjectGUID="{53F8BD39-3830-4D14-A7C5-7415CBD26C84}"
+	SccProjectName=""
+	SccLocalPath=""
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory=".\Debug"
+			IntermediateDirectory=".\Debug"
+			ConfigurationType="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="make"
+				ReBuildCommandLine="make -a"
+				CleanCommandLine="make clean"
+				Output="gbtest_banks.gb"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory=".\Release"
+			IntermediateDirectory=".\Release"
+			ConfigurationType="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="make"
+				ReBuildCommandLine="make -a"
+				CleanCommandLine="make clean"
+				Output="gbtest_banks.gb"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<File
+			RelativePath=".\assert.h">
+		</File>
+		<File
+			RelativePath=".\checkkey.c">
+		</File>
+		<File
+			RelativePath=".\checkkey.h">
+		</File>
+		<File
+			RelativePath="display.c">
+		</File>
+		<File
+			RelativePath="display.h">
+		</File>
+		<File
+			RelativePath=".\gbtest_banks.c">
+		</File>
+		<File
+			RelativePath=".\gbtest_banks.map">
+		</File>
+		<File
+			RelativePath="hdigits.c">
+		</File>
+		<File
+			RelativePath="hdigits.h">
+		</File>
+		<File
+			RelativePath="makefile">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

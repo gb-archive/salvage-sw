@@ -1,0 +1,25 @@
+XL
+H 7 areas 2 global symbols
+M assert
+O -mgbz80
+S _printf Ref0000
+A _CODE size 49 flags 0
+S __assert Def0000
+A _DATA size 0 flags 0
+A _OVERLAY size 0 flags 0
+A _HOME size 0 flags 0
+A _GSINIT size 0 flags 0
+A _GSFINAL size 0 flags 0
+A _CABS size 0 flags 0
+T 00 00 F8 04 2A 66 6F E5 F8 08 2A 66 6F E5 F8 06
+R 00 00 00 00
+T 0E 00 2A 66 6F E5 21 1F 00 E5 CD 00 00 E8 08 C3
+R 00 00 00 00 00 07 00 00 02 0B 00 00
+T 1C 00 1B 00 C9 41 73 73 65 72 74 28 25 73 29 20
+R 00 00 00 00 00 02 00 00
+T 2A 00 66 61 69 6C 65 64 20 61 74 20 6C 69 6E 65
+R 00 00 00 00
+T 38 00 20 25 75 20 69 6E 20 66 69 6C 65 20 25 73
+R 00 00 00 00
+T 46 00 2E 0A 00
+R 00 00 00 00

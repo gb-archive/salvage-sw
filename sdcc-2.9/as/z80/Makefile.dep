@@ -1,0 +1,18 @@
+asmain.o: asmain.c asm.h ../../sdccconf.h z80.h
+assubr.o: assubr.c asm.h ../../sdccconf.h
+asexpr.o: asexpr.c asm.h ../../sdccconf.h
+asdata.o: asdata.c asm.h ../../sdccconf.h
+aslist.o: aslist.c asm.h ../../sdccconf.h
+asout.o: asout.c asm.h ../../sdccconf.h
+z80ext.o: z80ext.c asm.h ../../sdccconf.h z80.h
+z80pst.o: z80pst.c asm.h ../../sdccconf.h z80.h
+z80mch.o: z80mch.c asm.h ../../sdccconf.h z80.h
+z80adr.o: z80adr.c asm.h ../../sdccconf.h z80.h
+strcmpi.o: ../asxxsrc/strcmpi.c
+assym.o: ../asxxsrc/assym.c ./asm.h ./../../sdccconf.h
+aslex.o: ../asxxsrc/aslex.c ./../../support/Util/dbuf_string.h \
+  ./../../support/Util/dbuf.h ./asm.h ./../../sdccconf.h
+asnoice.o: ../asxxsrc/asnoice.c ./asm.h ./../../sdccconf.h
+dbuf.o: ../../support/Util/dbuf.c ../../support/Util/dbuf.h
+dbuf_string.o: ../../support/Util/dbuf_string.c \
+  ../../support/Util/dbuf_string.h ../../support/Util/dbuf.h

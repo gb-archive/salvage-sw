@@ -1,0 +1,21 @@
+XL
+H 7 areas 2 global symbols
+M _uchar2fs
+O -mgbz80
+S ___ulong2fs Ref0000
+A _CODE size 37 flags 0
+S ___uchar2fs Def0000
+A _DATA size 0 flags 0
+A _OVERLAY size 0 flags 0
+A _HOME size 0 flags 0
+A _GSINIT size 0 flags 0
+A _GSFINAL size 0 flags 0
+A _CABS size 0 flags 0
+T 00 00 F5 F5 F8 06 7E F8 00 22 36 00 23 36 00 23
+R 00 00 00 00
+T 0E 00 36 00 2B 2A 66 6F E5 F8 02 2A 66 6F E5 CD
+R 00 00 00 00
+T 1C 00 00 00 E8 04 E5 F8 02 73 23 72 D1 23 73 23
+R 00 00 00 00 02 02 00 00
+T 2A 00 72 F8 00 5E 23 56 23 2A 66 6F E8 04 C9
+R 00 00 00 00

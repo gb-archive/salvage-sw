@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="gbmath1"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="make"
+				ReBuildCommandLine="make -a"
+				CleanCommandLine="make clean"
+				Output="$(ProjectName).gb"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				Output="gbmath1.gb"/>
+		</Configuration>
+		<Configuration
+			Name="Simulate|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="make"
+				ReBuildCommandLine="make -a"
+				CleanCommandLine="make clean"
+				Output="$(ProjectName).gb"/>
+		</Configuration>
+	</Configurations>
+	<Files>
+		<Filter
+			Name="Headers"
+			Filter="">
+			<File
+				RelativePath=".\assert.h">
+			</File>
+			<File
+				RelativePath=".\debug.h">
+			</File>
+			<File
+				RelativePath=".\dl.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="source"
+			Filter="">
+			<File
+				RelativePath=".\assert.c">
+			</File>
+			<File
+				RelativePath=".\gbmath1.c">
+			</File>
+			<File
+				RelativePath=".\test_div_n.c">
+			</File>
+			<File
+				RelativePath=".\test_fsadd.c">
+			</File>
+			<File
+				RelativePath=".\test_fsdiv.c">
+			</File>
+			<File
+				RelativePath=".\test_string.c">
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\gbmath1.map">
+		</File>
+		<File
+			RelativePath=".\makefile">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

@@ -1,0 +1,42 @@
+				WAV2GB 0.2b
+ 	---------------------------------------------------------
+	A digital audio converter for the Nintendo Gameboy system
+		          (c) Anders Granlund 1998
+
+WAV2GB converts 8 or 16 bit Windows .WAV samples and RAW sample data into
+raw 4bit samples that that the Gameboy can use. It also includes a header
+witch tells how many "sample packs" there are in the file.
+By "sample pack" i mean 16 byte of data, wich is excatly how much that fits
+in the Gameboys Wave-Pattern-Ram ($FF30-$FF3F). So a "sample pack" is basically
+the number of sample-bytes / 16.
+
+Usage:
+
+WAV2GB [-8]/[-16] Importfile [Exportfile]
+
+-8 		The original sample is 8bit  (default)
+-16		The original sample is 16bit
+Importfile	Filename of original file
+Exportfile	Filename of converted file (default = EXPORT.GBW)
+
+
+
+Once this is set, the program will scan the original file to tell if
+it is a Windows .WAV or just RAW sample data...
+As for now the program only exports in TASM format, but there more
+export types will surely be supported in the future.
+
+				History:
+980118  - Ability to import 8bit Windows .WAV
+	- Exports to TASM format
+
+980120	- First public release! (ver0.2b)
+	- Imports .WAV or raw data (autodetected)
+	- Ability to set 8 or 16 bit for original sample
+
+
+
+
+
+	Any questions, comments or whatever? Just drop me an Email at:
+		anders.granlund@sundsvall.mail.telia.com

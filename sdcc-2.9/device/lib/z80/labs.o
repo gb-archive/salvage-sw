@@ -1,0 +1,22 @@
+XL
+H 7 areas 1 global symbols
+M labs
+O -mz80
+A _CODE size 40 flags 0
+S _labs Def0000
+A _DATA size 0 flags 0
+A _OVERLAY size 0 flags 0
+A _HOME size 0 flags 0
+A _GSINIT size 0 flags 0
+A _GSFINAL size 0 flags 0
+A _CABS size 0 flags 0
+T 00 00 DD E5 DD 21 00 00 DD 39 DD 7E 07 07 E6 01
+R 00 00 00 00
+T 0E 00 D6 01 3E 00 17 B7 28 0E DD 4E 04 DD 46 05
+R 00 00 00 00
+T 1C 00 DD 5E 06 DD 56 07 18 17 AF DD 9E 04 4F 3E
+R 00 00 00 00
+T 2A 00 00 DD 9E 05 47 3E 00 DD 9E 06 5F 3E 00 DD
+R 00 00 00 00
+T 38 00 9E 07 57 69 60 DD E1 C9
+R 00 00 00 00

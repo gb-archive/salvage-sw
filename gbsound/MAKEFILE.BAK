@@ -1,0 +1,33 @@
+CC=lcc '-Wf-g,;' -Wa-l -Wl-m -c
+LINK=lcc '-Wf-g,;' -Wa-l -Wl-m
+
+.c.o:
+	$(CC) -o $@ $<
+
+.s.o:
+	$(CC) -o $@ $<
+
+.o.gb:
+	$(LINK) -o $@ $**
+
+gbvario.gb : assert.o gbvario.o adisplay.o vdisplay.o sensor.o scale.o graph.o halt.o long.o
+	$(LINK) -o $@ $**
+
+gbvario.o : gbvario.c adisplay.h vdisplay.h graph.h sensor.h
+adisplay.o : adisplay.c adisplay.h
+vdisplay.o : vdisplay.c vdisplay.h scale.h
+sensor.o : sensor.c sensor.h
+logscale.o : logscale.c scale.h
+scale.o : scale.c scale.h
+graph.o : graph.c graph.h
+assert.o : assert.c assert.h
+
+long.o : long.s
+	$(CC) -o $@ $**
+
+halt.o : halt.s
+	$(CC) -o $@ $**
+
+clean :
+		rm -f *.o *.lst *.map *.gb
+

@@ -1,0 +1,200 @@
+AREA .  .ABS.
+	RADIX HEX
+	BASE 0000
+	SIZE 0000
+	ATTRIB ABS OVR
+	GLOBALS
+		l__HEAP	0000
+		l_.  .ABS.	0000
+		s_.  .ABS.	0000
+		s__HEADER	0000
+		.init	0000
+		l__BSS	0065
+		l__HEADER	01EB
+		s__CODE	0200
+		l__LIT	0250
+		l__DATA	12D1
+		l__CODE	299B
+		s__DATA	2B9B
+		s__LIT	3E6C
+		.OAM	C000
+		s__BSS	C0A0
+		s__HEAP	C105
+		.STACK	E000
+		.refresh_OAM	FF80
+AREA _CODE
+	RADIX HEX
+	BASE 0200
+	SIZE 299B
+	ATTRIB REL CON
+	GLOBALS
+		.set_mode	0200
+		.add_VBL	020D
+		.add_LCD	0213
+		.add_TIM	0219
+		.add_SIO	021F
+		.add_JOY	0225
+		.remove_int	022B
+		.wait_vbl_done	0251
+		_wait_vbl_done	0251
+		_display_off	0262
+		.display_off	0262
+		.serial_IO	0283
+		_mode	02B2
+		_enable_interrupts	02BB
+		_disable_interrupts	02BD
+		_reset	02BF
+		.reset	02BF
+		_set_interrupts	02C5
+		_add_VBL	02D0
+		_add_LCD	02DB
+		_add_TIM	02E6
+		_add_SIO	02F1
+		_add_JOY	02FC
+		_current_value	0307
+		_update_value	09B1
+		_draw_screen	1C6B
+		_play_music	1D39
+		_dump_registers	1DBB
+		_wait_event	1EDB
+		_main	2300
+		.tmode	2491
+		.tmode_out	24BA
+		.out_char	24EE
+		.put_char	24F5
+		.del_char	2504
+		.adv_curs	255E
+		.cr_curs	2593
+		_cls	25D6
+		_putchar	25F1
+		_gotoxy	2604
+		_posx	261B
+		_posy	262C
+		_setchar	263D
+		_print	2650
+		.mod16	2675
+		.div16	2675
+		.modu16	26B2
+		.divu16	26B2
+		.mod8	26EF
+		.div8	26EF
+		.modu8	26FA
+		.divu8	26FA
+		.gmode	2701
+		.vbl	2754
+		.lcd	275F
+		.draw_image	276C
+		.switch_data	2776
+		.plot	27B1
+		_plot	2924
+		_switch_data	293D
+		_line	295A
+		_draw_image	2977
+		_clear	298C
+		_println	299F
+		.padup	2A45
+		_waitpadup	2A45
+		.jpad	2A55
+		.wait_pad	2A82
+		_joypad	2A89
+		_waitpad	2A8E
+		.delay	2A98
+		_delay	2AD2
+		.init_vram	2ADB
+		.init_wtt	2AE9
+		.init_btt	2AF9
+		.init_tt	2B07
+		_printn	2B0D
+		.copy_vram	2B79
+		_get_data	2B88
+		_set_data	2B88
+AREA _HEADER
+	RADIX HEX
+	BASE 0000
+	SIZE 01EB
+	ATTRIB ABS OVR
+AREA _DATA
+	RADIX HEX
+	BASE 2B9B
+	SIZE 12D1
+	ATTRIB REL CON
+	GLOBALS
+		_frequencies	2B9B
+		_music	2C2B
+		_params_0	2C5C
+		_params_1	2C78
+		_params_2	2CB4
+		_params_3	2CE4
+		_params_4	2D0C
+		_params_array	2D40
+		.y_table	3D4A
+		_digits	3E6A
+AREA _LIT
+	RADIX HEX
+	BASE 3E6C
+	SIZE 0250
+	ATTRIB REL CON
+AREA _BSS
+	RADIX HEX
+	BASE C0A0
+	SIZE 0065
+	ATTRIB REL CON
+	GLOBALS
+		__cpu	C0A0
+		.mode	C0A1
+		__io_out	C0A2
+		__io_in	C0A3
+		__io_status	C0A4
+		.vbl_done	C0A5
+		.int_0x40	C0A6
+		.int_0x48	C0B6
+		.int_0x50	C0C6
+		.int_0x58	C0D6
+		.int_0x60	C0E6
+		_soundReg	C0F6
+		_params	C0F8
+		.curx	C0FA
+		.cury	C0FB
+AREA _HEAP
+	RADIX HEX
+	BASE C105
+	SIZE 0000
+	ATTRIB REL CON
+	GLOBALS
+		_malloc_heap_start	C105
+MODULES
+	FILE d:/gbdk\lib\crt0.o
+		NAME Runtime
+	FILE sound.o
+LIBRARIES
+	LIBRARY d:/gbdk\lib\gb.lib
+		MODULE output.o
+	LIBRARY d:/gbdk\lib\gb.lib
+		MODULE print.o
+	LIBRARY d:/gbdk\lib\gb.lib
+		MODULE div.o
+	LIBRARY d:/gbdk\lib\gb.lib
+		MODULE drawing.o
+	LIBRARY d:/gbdk\lib\gb.lib
+		MODULE println.o
+	LIBRARY d:/gbdk\lib\gb.lib
+		MODULE pad.o
+	LIBRARY d:/gbdk\lib\gb.lib
+		MODULE delay.o
+	LIBRARY d:/gbdk\lib\gb.lib
+		MODULE init_tt.o
+	LIBRARY d:/gbdk\lib\gb.lib
+		MODULE printn.o
+	LIBRARY d:/gbdk\lib\gb.lib
+		MODULE cpy_data.o
+	LIBRARY d:/gbdk\lib\gb.lib
+		MODULE digits.o
+USERBASEDEF
+	_CODE=0x0200
+	_BSS=0xC0A0
+	_CODE_1=0x4000
+USERGLOBALDEF
+	.OAM=0xC000
+	.STACK=0xE000
+	.refresh_OAM=0xFF80
+	.init=0x0000

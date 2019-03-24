@@ -1,0 +1,12 @@
+Virtual Game Boy Color
+By Rusty Wagner
+Copyright (C) 2000, Assembly Coder's Zenith, Inc.
+-----------------------------------------------------
+
+This is the FULL VERSION and is now FREE.  It will soon become an open source
+project on sourceforge.net also.
+
+This product is currently in the beta stage, and there are several known bugs.
+If you have problems or suggestions, please e-mail me at rusty@acz.org.
+
+Visit the VGBC site at http://rusty.acz.org/vgbc.html

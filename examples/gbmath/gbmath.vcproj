@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="gbmath"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="make "
+				ReBuildCommandLine="make -a"
+				CleanCommandLine="make clean"
+				Output="$(ProjectName).gb"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				Output="gbmath.gb"/>
+		</Configuration>
+		<Configuration
+			Name="Simulate|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="make"
+				ReBuildCommandLine="make -a"
+				CleanCommandLine="make clean"
+				Output="$(ProjectName).gb"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Headers"
+			Filter="">
+			<File
+				RelativePath=".\assert.h">
+			</File>
+			<File
+				RelativePath=".\debug.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="source"
+			Filter="">
+			<File
+				RelativePath=".\assert.c">
+			</File>
+			<File
+				RelativePath=".\gbmath.c">
+			</File>
+			<File
+				RelativePath=".\test_fsmul.c">
+			</File>
+			<File
+				RelativePath=".\test_mul.c">
+			</File>
+			<File
+				RelativePath=".\test_mul_n.c">
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\gbmath.map">
+		</File>
+		<File
+			RelativePath=".\makefile">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>
