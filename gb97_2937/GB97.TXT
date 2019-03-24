@@ -1,0 +1,415 @@
+==========================================================================
+
+                =========================================
+                GB97 Gameboy Emulator in 32 bit assembler
+                =========================================
+
+==========================================================================
+
+Released Builds :
+
+1.989 on 1st June 1997 :
+    First release build. Four carts don't work.
+
+2.160 on 3rd June 1997 :
+    Interim release.
+        Fix bug running under DOS rather than Win95, causing PMode
+                                             exception when a key pressed.
+        Added sweeps to sound & on/off fixed.
+        Added Autofire.
+        Added a hack to make Bubble Bobble 1 work properly.
+        Fixed (partially !) VBLANK Interrupt timing.
+        Supports 32k RAM Battery Backup Cartridges
+
+2.192 on 4th June 1997 :
+        Added Autofire On/Off & Messages. Created home page.
+
+2.320 on 5th June 1997:
+        Added Joystick support
+        Added Game Genie Cheat codes
+        Added Gameboy-like background for small screen
+        Stopped long-play hiss on Zelda 3
+
+2.368 on 6th June 1997:
+        Added Sprites prioritised by depth (not by position)
+
+2.426 on 9th June 1997:
+        Fixed sprite bug. (disappeared of Left hand side of screen)
+        Support for 4 button joysticks.
+
+2.447 on 9th June 1997:
+        Support for VGB Colour Configuration files (via a Translator)
+        Fixed Patrik Alexandersson's bug (Bart Simpson)
+
+2.524 on 9th June 1997:
+        First version with debugger released.
+
+2.604 on 11th June 1997:
+        Donkey Kong 95 & Hudson Hawk running
+
+2.732 on 12th June 1997:
+        In game Save & Load (8 per cartridge)
+        Use 256-colour bitmaps as background
+        Game Painting
+        Reset Button Added
+        Display Mode Toggle Key Added
+        Pause Button Added
+        Reversed default sprite order so Zelda IV map looks better.
+
+2.830 on 17th June 1997:
+        Fix for 'Frank Thornton Baseball' (VBI enabled when screen off)
+        Fix F7 Save bug in Super Mario Land 2 & 3 and others. [READ NOTE]
+        Config uses Default.G97 for its defaults (if it exists)
+        Added new sound code
+        Added support for 'Or Interrupt Byte' (fixed Waverace)
+        Added Icon (courtesy of Lee@lp1.demon.co.uk)
+        Fixed Window Fudge Bug (now removed from Config)
+        Changed Default Colours
+        Fixed extra ticks bug - now runs at about 59.5 fps
+
+2.860 on 18th June 1997:
+        Fix for 'Gauntlet' (starts in one player mode)
+        Minor fiddles for the sound code. (Pacman was quiet !)
+        Step Over now works properly.
+        Joystick uses BIOS rather than port I/O, seems to work better !
+        Added Autofix for : Altered Space, Asteroids, Bubble Bobble 1,
+                Daedlian Opus,Doraemon 2,Frank Thomas Baseball,Hudson Hawk,
+                Ren & Stimpy Vidiots, StreetFighter 2 and WaveRace
+
+2.887 on 20th June 1997:
+        Hudson Hawk now invokes internal fix correctly.
+        Early VBI Fix for Addams Family 1
+        Fixed Alleyway.
+        Fattened out the display font slightly
+        Note: There's some GUI code in this. If you click the mouse
+        you can move it around but it's still in development.
+
+2.890 on 20th June 1997:
+        Fixed R-Type 2
+        Speeded up the Joystick code.
+
+2.909 on 23rd June 1997:
+        Fixes for Alfred Chicken, Jeopardy, Hook, Robocop 2,
+        Super Hunchback, Obelix, Yogi Bear
+        Long filename for startup truncated.
+        Mouse code can be removed.
+        New background.
+        Snapshot Loads and Saves can be cancelled. (press RETURN)
+
+2.937 on 1st July 1997:
+        Added 360 x 144 display mode.
+        Fixed WWFKing/Ring
+        Added Jeff Frohwein's new opcode cycle timings
+
+==========================================================================
+
+To run a game, type GB97 <filename> . The filename does not need to end
+in '.GB' but the program looks for a '.GB' image.
+
+Example : GB97 ZELDA
+
+There are no command line switches. All files should be in the same
+directory (it makes life easier !)
+
+Keys
+====
+
+Most of these keys are redefinable (except accelerate and escape I think)
+
+Arrow Keys              Joypad
+Ctrl                    A
+Alt                     B
+Select                  TAB
+Start                   RETURN
+Accelerate EMU          Keypad + (for getting past long title screens mainly !)
+Quit                    ESCAPE
+F1 and F2               Toggle Autofire on/off (must be set on in Configuration)
+Backspace               Reset
+/                       Switch Display Mode (between normal,stretch and tweak)
+P                       Pause
+C                       Colour the Game
+F5                      Load in saved game status
+F7                      Save game status
+
+To activate the joystick, just press either button A or button B. If you
+have problems with the joystick, you can disable it (put 0 in joystick
+port address in CONFIG) and use JoyEmu (hopefully !) If anyone tries this
+can they let me know if it works.
+
+Saving & Loading
+================
+
+Each cartridge can have up to 8 saved games (called xxx.Ga0 through xxx.Ga7)
+This seems to work ok on the dozen or so cartridges I have tested but it
+may not work universally,so I suggest you save twice in different slots
+to start with.... this is a bit of a monumental hack. Each file is
+over 64k in length so don't save too many ! 
+
+Important : The first version of this did not work properly because in a
+major bout of dementia I forgot to save the Cartridge RAM !!! This is now
+saved with the image, so games which use this save method before which
+had battery backed Cartridge RAM in 2.732 will not reload properly into
+later versions. Sorry ! this was all my fault. THIS ONLY APPLIES TO GAMES
+WHICH HAD BATTERY BACKED CART RAM.
+
+If you reload a game state and then exit the emulator saves the cartridge
+RAM to disk, as you would expect. However if you RESET a game, it reloads
+the cartridge RAM off disk, NOT from the saved image.
+
+I will do my best to make sure that games saved with F7/F5 are backwards
+compatible.
+
+Thanks to Patrik Alexanderson & Martin Sjostrand for help with these bugs.
+ 
+Game Painting
+=============
+
+Pressing 'C' allows you to enter the game colouring routine, which allows
+the 16 elements of the Gameboy display to be coloured. (They are background,
+window,sprite A and sprite B, each having 4 colours). You will see that
+the currently selected colour is flashing, the time when it is most 'on'
+is the current colour. The left & right arrows change the colour, and the
+up and down arrows change the selected element. Pressing RETURN continues
+the game. The advantage of this method is you can colour in the game while
+you are playing it !
+
+Backgrounds
+===========
+
+Gameboy 97 can use any 256 colour 320x200 bitmap for its background. The
+default background used is 'Default.Bmp' - if a bitmap with the same
+name as the cartridge is found that will be used instead. It is possible
+to convert VGB's .GIF files to .BMP files using Paint Shop Pro, or Word
+(which is what I used !)
+
+When creating a bitmap you can't use more than 192 colours of the 256
+available and it must be saved in 256 colour Bitmap form - 16 colour
+bitmaps are not supported.
+
+Configuration
+=============
+
+There is a configuration program which creates files of type '.G97' which
+contain information on how the emulator operates. There are three possible
+scenarios.
+
+(i)     The image loaded has its own file (e.g. Zelda.G97) in which case that
+        is used.
+
+(ii)    There is a default file used by everyone available, called default.g97
+
+(iii)   There is no .G97 file, the defaults are used.
+
+Generally, the defaults work fine. However, it is possible to redefine the
+game keys, which is quite useful, and change the colour scheme.
+
+Configuration Options
+=====================
+
+To start the configuration editor type CONFIG (for the default file) and
+CONFIG <image> (for an image specific file) - e.g. CONFIG ZELDA
+
+Values are changed either using Space or by typing them in. To exit press
+ESCAPE.
+
+For the keys, the scan code is displayed. To check possible scan codes
+run a ROM image in the emulator, and when you exit using ESCape hold down
+the F3 key. The program will display scan codes as a key is pressed. To
+exit this,press ESC. (Note: not all key combinations are possible due
+to the very simple keyboard handler)
+
+DisplaySkipRate Set the number of frames per displayed frame. If this is
+                1 then every frame is displayed. To speed up the emulation
+                set this to a number greater than 1. 3 looks fine to me.
+
+Sync On         Causes the emulation to run at about 59.5 fps (which is about
+                right). Turning this off means the emulation will run as
+                fast as it can. On Pentiums its silly !
+
+Frame Rate      The number of frames displayed per PC Clock Tick. Increasing
+                this speeds the game up.
+
+No Int 60       Turning this on disables the keyboard interrupt in the
+                gameboy. I added this late so I don't know how it will
+                affect all the games, but it seems to be unnecessary. This
+                will probably go in a later release, as I'm not sure
+                exactly how this interrupt functions.
+
+Adlib FM Port   The address of the ADLIB card (or soundblaster card adlib
+                port). I think this is always $388 (904). If it doesn't
+                work, find out where it is on your machine. (Try using
+                System Properties in Windows 95). The sound code is
+                bog standard Adlib stuff.
+
+ModexxCycles    These three settings determine how many CPU cycles (tied to
+                number of instructions) are done in the various bits of the
+                window. If you have a slow machine, try reducing them (I
+                recommend the Mode1x Cycle values). This can have
+                unpredictable results depending on the game in question.
+                (Try changing the Frame Skip Rate first). Occasionally
+                increasing this (esp Mode00) will stop some games crashing,
+                especially if they 'freeze' - e.g. Daedlian Opus.
+
+NoRecursiveInts Stops interrupts being generated while the Z80 IFlag is
+                disabled. Some games get stuck in a loop where the
+                interrupt is recalled before its finished (e.g. Bubble
+                Bobble 1). This is a useful hack.
+
+FastSprites     Turning this on goes back to the old 'whole screen' sprite
+                method, which is a bit quicker.
+
+Hack            Hacks for various ROMs. These should be in individual
+                configuration files only. These have only been tested on
+                the ROM Images I have.
+
+                        Hack#1 - Hudson Hawk
+
+                Hopefully, these should be removed as the emulation improves.
+
+Barring disasters, .G97 files should always be backwards compatible. I
+will endeavour to make it so.
+
+Speed
+=====
+
+The development was done on a 586/133,Pentium 120 and a DX2/66 without any
+external cache. On all machines it was up to speed. If some games seem
+a bit slow,try setting the display frame skip to 3. With the turbo switch
+on the DX2/66 off (does this make it a DX2/25 or what ?) some games were
+still playable by hacking the Modexx cycle counts (reducing them). If you
+have a SX25 or something, please buy a DX2/66 ! It will work, albiet
+slowly, on a 386.
+
+Colours
+=======
+
+It came to my attention that there were some pretty good colour schemes
+available for VGB-DOS. It is now possible to use these in GB97.
+
+The VGB Colour schemes are in .CFG files (e.g. Mario.Cfg). These need
+to be converted into Gameboy 97 equivalent files (.C97). Later versions
+of Gameboy 97 will allow these .C97 files to be edited in mid-game.
+
+There is a program called trans which translates .CFG files to .C97 files
+To call it either use just TRANS which will translate everything in the
+current directory, or TRANS MARIO.CFG to convert Mario's .CFG file into
+a .C97 file. Loading an image in GB97 now automatically loads the .C97
+file in. I thought about incorporating the Colour information into the
+.G97 file but rejected it.
+
+The Debugger
+============
+
+Gameboy 97 has a debugger built in. This is activated by pressing key
+F12 (by default, this can be changed)
+
+The debugger has 3 windows. One displays the status of the CPU and
+some of the Gameboy Registers in page $FF, one displays code and one
+displays data.
+
+To move around the code and data windows you can use the arrow keys (back
+or forward 8 bytes), or Page Up and Page Down (back and forward 64 bytes),
+or you can type the address you want directly in (the number keypad isn't
+available at the moment). By default, this moves around the memory
+pointer in the Code window. To move the pointer in the data window, hold
+down the Control key. (e.g. Ctrl+Down increments the data pointer by 8)
+
+The current instruction is shown by a red '>' character in the code window.
+
+Other keys used
+===============
+
+        F1..F4  Set breakpoint to the current code address (e.g. the
+                value at the top of the screen). If the breakpoint is
+                already there , it is cleared.
+
+        F5      Runs the emulator until a breakpoint is encountered.
+
+        F7      Single Step
+
+        F8      Single Step (steps over subroutines either CALL or RST,
+                they are executed in one keystroke)
+
+        F10     Run the program, no breakpoints are tested. (Faster than
+                F5 , it doesn't do the tests !)
+
+        HOME    Move the code cursor to the program counter
+
+        END     Move the data cursor to $FF00
+
+What's missing for now
+======================
+
+Alternate large screen video mode which distorts the graphics less.
+    This will be a VGA hack mode so the old large screen will be retained
+    as this will work on all monitors.
+
+Graphical User Inteface (GUI)
+    A better User interface to replace Config , which is basically a
+    quick botch job.
+        
+Games that don't work
+=====================
+
+It has been mentioned that some games that don't work under VGB also don't
+work under GB97. It should be noted that the underlying code is completely
+different - even though it fits the same spec - interrupts etc. are done
+a different way. However, there are now several games which work under GB97
+which don't work under VGBDOS and I am working towards no failing
+games ! (slowly)
+
+Fixing for several game is built in to Gameboy 97. If the program detects
+these games it automatically configures the emulator to run them. This can
+be turned off by setting 'Fix ROMs' to False.
+
+If you have problems - if the screen contains junk try 'Fudge Window'. If
+the game locks try 'No Recursive Interrupts'. You can also try increasing
+the Mode00 cycle value or other values - this works for Daedlian Opus.
+
+There is now a list of non-working games on the home page at
+http://users.aol.com/autismuk/gameboy.htm
+
+Information
+===========
+
+This program should be distributed as a complete entity (the three executables
+and this documentation file).
+
+This program is freeware. It cannot be distributed for monetary or other
+gain.
+
+Finally
+=======
+
+Please do NOT eMail me asking for the location of Gameboy ROM Images. Any
+such messages will be ignored. Bug reports, suggestions for improvements,
+compliments or money (errmmmm....) are welcome. I'd especially be open to
+486/586/Pentium optimisation ideas, as I don't know a lot about this !
+
+Paul Robson
+autismuk@aol.com
+
+I would like to acknowledge the (unwitting !) help of the following.
+(in alphabetical order), for making available on the internet
+Gameboy Source & Code, and information about the machine itself.
+
+Dr Pan of Anthrax for the Gameboy programming Documentation.
+Gameboy programming mailing list.
+Jeff Frohwein for the Gameboy Technical Website & his disassembler,
+                        the Game Genie information & lots of other stuff.
+Jens C. Restemeier for various tools & the GBDemo program & source.
+Harry Mulder for the Zoomar program & source.
+HeroZero for various programs & sources.
+Lee@jlp1.Demon.Co.Uk for the Gameboy 97 Icon.
+Marat Fayzullin for the Gameboy FAQ.
+Marat Fayzullin & Marcel DeKogel & others for VGB-DOS,especially FmFreqs.H !
+Matt Currie for the VGB Interrupt Demo source & code.
+Michael Kunstelj for the article on 386/Pentium optimisation.
+Michael Tippich for WDOSX, the free DOS Extender.
+Mike Mika for some useful documentation & "first gameboy program" code.
+Pascal Felber for the MBC Cartridge mapping information.
+Peter Quiring for documentation on setting up a keyboard handler.
+RTOONist for the new default background.
+
+and lots of others who provided bits & bobs who I've forgotten about.
+

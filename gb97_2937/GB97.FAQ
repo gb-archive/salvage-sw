@@ -1,0 +1,153 @@
+
+                Frequently Asked Questions about Gameboy 97
+                ===========================================
+
+1. Where do I get the latest release ?
+
+        The latest version is always available from the home page
+        [http://users.aol.com/autismuk/gameboy.htm] ready to download.
+        It contains all the necessary files to run Gameboy 97, except
+        ROM Images. You can also check EMUNEWS
+        (http://users.aol.com/emunews) for the latest information.
+
+2. Why doesn't the joypad work properly ?
+
+        There are timing problems in the Joystick code which aren't yet
+        fixed. These have been temporarily fixed by using the BIOS
+        Joystick Function (versions > 2.830). If you get really stuck
+        use JoyEmu and disable the joypad (set address to zero). This
+        does work !
+
+3. How do I put in Game Genie codes
+
+        Miss the 8th digit out. It's a carry on from an original error.
+        so 4A4-249-705 would type in as 4A424975 and it would display as
+        4A42497_5. The 8th digit is a checksum of some sort, I think.
+        This idiocy is entirely the fault of the programmer.
+                
+4. How do I make game 'xxx' work ?
+
+        Check to see if the cartridge length is valid (should be 32768,
+        65536,131072,262144 or 524288). If not, the cartridge may be
+        corrupted. Try changing the values in Config especially the
+        'No recursive Interrupt' or extending the 'Mode 11 Cycles'. If
+        the screen goes off & freezes , try turning 'VBI when off' on.
+        If there's a hack available, try that. There's a list of games
+        on the homepage.
+
+5. I've tried all that and it still doesn't work. What do I do next ?
+
+        Look it up on the homepage http://users.aol.com/autismuk/gameboy.htm
+        which has fixes for known games. If that doesn't work
+        email me at autismuk@aol.com describing the problem and I'll try
+        and sort it out. Note : NOT Final Fantasy Adventure OR Snow Bros
+        which I'm still trying to figure out. Don't send me Rom images, if
+        I need the image I'll ask for it. Games tend to fall into the
+        easy to fix or complete bastard categories.
+
+6. What does the painter do ?
+
+        A Gameboy has 16 screen elements - the background, the window and
+        two sprite palettes. The painter allows you to colour the various
+        bits (each element has 4 sub-elements) in various colours to produce
+        a Super Gameboy effect. Play with it for a while, you'll get the
+        idea quickly.
+
+7. I've got a screen full of numbers... help !
+
+        You've entered the debugger by mistake. Press key F10. This is
+        a developers tool. If you don't understand it, you won't need
+        it.
+
+8. How do I suggest improvements ?
+
+        Email them to autismuk@aol.com. All suggestions, where legally or
+        morally possible are welcomed. Make sure you have the latest
+        version - what you want may already be available.
+
+9. Game 'xxx' works on VGB but not on Gameboy 97
+
+        Let me know ! AFAIK there are now no games in this category. The
+        maintainer of VGB and I are sharing information and ideas for
+        fixes, so we hope to keep both GB97 and VGB as accurate as
+        possible. If you are maintaining another VGB version and don't
+        use Hans's source let me know if you want some assistance with
+        bug fixes. I am a great believer in 'friendly competition'
+        between emulator authors.
+
+10. Will Gameboy 97 always be free ?
+
+        Yes, unless someone offers me a large amount of money for it ! I
+        have no intention of it becoming shareware.
+
+11. What is Config for ?
+
+        To set up various things about how the emulator works - colour
+        schemes,keyboard definitions etc. 99% of cartridges will run
+        quite happily without being configured.
+
+12. When will the source be available ?
+
+        I haven't yet decided whether or not to release the source.
+        When it is available I will post to comp.emulators.* and email
+        emunews.
+
+13. Where do I get ROMs ?
+
+        Don't ask me... look on the WWW - try searching emulator pages.
+        There are 2 games available on the net freely - the Yar's Revenge
+        demo by Genetic Fantasia and Norman Nithman's Tic-tac-toe.
+
+14. Will Gameboy 97 be available on other platforms ?
+
+        No. Its all in 32-bit assembler, so it would be a bit of a
+        nightmare to port. Having said that, there is a possiblity of
+        a Linux port, and an OS/2 port. Basically , only i386 machines.
+
+15. I'm writing an emulator. Can I ask for help ?
+
+        Yes. I would recommend reading Marat Fayzullin's and Dr Pan's
+        documents first as they contain mostly accurate technical information
+        about the Gameboy. The latest Dr Pan document can be obtained
+        from Jeff Frohwein's Gameboy site, which is an excellent source
+        of Gameboy information.
+
+16. When will Super Gameboy support be available ?
+
+        When I've figured out how it works. The painter and background
+        fulfil most of the functionality of the SGB.
+
+17. Why are there so many different versions ?
+
+        When I do any sort of useful update, I release it. There are
+        currently about 6 or 7 versions that have been uploaded, but
+        the current version is always available on my web page.
+
+18. How do I design a background ?
+
+        Use paint. Set up a 320x200 image (Image Attributes) and draw
+        your picture. If you start with the provided image the 'hole'
+        for the display will always be in the right place. Save it as
+        a 256-colour bitmap (a 16 colour one won't work...)
+
+        Note : When it says use Paint it means Windows App Paint, not
+        physical paint....
+
+19. How do I use VGB colour schemes ?
+
+        Use the TRANS program to convert your .CFG to .C97 files, either
+        by TRANS which converts all files in the current directory or
+        TRANS <filename> to convert individual files. Hans changed the
+        way the CFG files work at some point, so not all CFG files will
+        translate. I grabbed a batch off the WWW though, and they seemed
+        to work ok.
+
+20. How do I remap joystick buttons ?
+
+        Use JoyEmu which allows this, with some fiddling. Set the joystick
+        address in config to zero.
+
+21. My screen goes mad when I press the / key
+
+        Your monitor cannot support 180 x 144 mode. Don't use it !
+
